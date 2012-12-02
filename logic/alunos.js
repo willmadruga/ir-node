@@ -78,7 +78,7 @@ exports.del = function(req, res, next){
 function preencheAluno(data) {
 	if(data.id == '') {
 		var d = new Date();
-		req.body.id = d.getDate() + '' + d.getMonth() + '' + d.getFullYear() + '' + d.getHours() + '' + d.getMinutes() + '' + d.getSeconds();
+		data.id = d.getDate() + '' + d.getMonth() + '' + d.getFullYear() + '' + d.getHours() + '' + d.getMinutes() + '' + d.getSeconds();
 		delete d;
 	}
 	

@@ -5,14 +5,22 @@ block content
   br
   form#alunoForm.form-horizontal
     input(type="hidden", name="id", value="#{aluno.id}")
+
     .control-group
       label.control-label(for='nome') Nome:
       .controls
-        input#nome.input-xxlarge(type="text", placeholder="nome completo", name="nome", value="#{aluno.nome}")
+        input#nome.input-xlarge(type="text", placeholder="nome completo", name="nome", value="#{aluno.nome}")
+
+    .control-group
+      label.control-label(for='nascimento') Data de Nascimento:
+      .controls
+        input#nascimento.input-medium(type="text", placeholder="", name="nascimento", value="#{aluno.nascimento}")
+
     .control-group
       label.control-label(for='endereco') Endereço:
       .controls
         input#endereco.input-xxlarge(type="text", placeholder="Rua... número...", name="endereco", value="#{aluno.endereco}")
+
     .control-group
       .controls
         a.btn.btn-warning(href="/aluno/lista")
