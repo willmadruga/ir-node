@@ -3,7 +3,7 @@
  */
 
 var express = require('express')
-  , alunos = require('./routes/alunos')
+  , alunos = require('./logic/alunos')
   , http = require('http')
   , path = require('path');
 
