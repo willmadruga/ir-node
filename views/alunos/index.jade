@@ -10,12 +10,15 @@ block content
   table.table.table-striped.table-bordered
     thead
       th Nome
-      th Endereco
-      th 
+      th Dia Vencimento
+      th Plano
+      th Modalidades
     - each aluno in alunos
       tr
         td:= aluno.nome
-        td:= aluno.endereco
+        td:= aluno.diaVencimento
+        td:= aluno.plano
+        td:= aluno.modalidades
         td
           a.btn.btn-info(href="/aluno/edit/#{aluno.id}")
             <i class="icon-pencil icon-white"></i> Editar
