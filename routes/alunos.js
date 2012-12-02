@@ -2,7 +2,7 @@
 var nStore = require('nstore');
 nStore = nStore.extend(require('nstore/query')());
 
-exports.list = function(req, res){
+exports.list = function(req, res, next){
 	var alunos = nStore.new('data/alunos.db', function () {
 		alunos.all(function (err, results) {
 			res.render('alunos/index', { title: 'Alunos', alunos: results });
@@ -10,8 +10,7 @@ exports.list = function(req, res){
 	});
 };
 
-exports.form = function(req, res){
-	//res.charset = 'ISO-8859-1';
+exports.form = function(req, res, next){
 	var data = {
 			'id' : '',
 			'nome' : '',
@@ -20,7 +19,7 @@ exports.form = function(req, res){
     res.render('alunos/form', { title : 'Novo', aluno: data });
 };
 
-exports.save = function(req, res){
+exports.save = function(req, res, next){
 	var alunos = nStore.new('data/alunos.db', function () {
 		if(req.body.id == '') {
 			var d = new Date();
@@ -39,7 +38,7 @@ exports.save = function(req, res){
 	});
 };
 
-exports.edit = function(req, res){
+exports.edit = function(req, res, next){
   	var alunos = nStore.new('data/alunos.db', function () {
 		alunos.get(req.params.id, function (err, doc, key) {
 			if (err) { throw err; }
@@ -48,7 +47,7 @@ exports.edit = function(req, res){
 	});
 };
 
-exports.del = function(req, res){
+exports.del = function(req, res, next){
   	var alunos = nStore.new('data/alunos.db', function () {
 		alunos.remove(req.params.id, function (err) {
 			if (err) { throw err; }
