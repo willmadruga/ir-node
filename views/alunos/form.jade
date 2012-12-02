@@ -1,0 +1,22 @@
+extends ../layout/template
+
+block content
+  h1= title
+  br
+  form#alunoForm.form-horizontal
+    input(type="hidden", name="id", value="#{aluno.id}")
+    .control-group
+      label.control-label(for='nome') Nome:
+      .controls
+        input#nome.input-xxlarge(type="text", placeholder="nome completo", name="nome", value="#{aluno.nome}")
+    .control-group
+      label.control-label(for='endereco') Endereço:
+      .controls
+        input#endereco.input-xxlarge(type="text", placeholder="Rua... número...", name="endereco", value="#{aluno.endereco}")
+    .control-group
+      .controls
+        a.btn.btn-warning(href="/aluno/lista")
+          <i class="icon-arrow-left icon-white"></i> Voltar
+        &nbsp;&nbsp;&nbsp;
+        a#save.btn.aluno.btn-primary(href="#") 
+          <i class="icon-ok icon-white"></i> Salvar

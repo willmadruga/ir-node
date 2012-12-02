@@ -1,0 +1,24 @@
+extends ../layout/template
+
+block content
+  
+  a.btn.btn-success(href="/aluno/novo") 
+    <i class="icon-plus-sign icon-white"></i> Novo
+  br
+  h1= title
+  br
+  table.table.table-striped.table-bordered
+    thead
+      th Nome
+      th Endereco
+      th 
+    - each aluno in alunos
+      tr
+        td:= aluno.nome
+        td:= aluno.endereco
+        td
+          a.btn.btn-info(href="/aluno/edit/#{aluno.id}")
+            <i class="icon-pencil icon-white"></i> Editar
+//-          &nbsp; &nbsp; &nbsp;
+//-          a.btn.btn-danger(href="/aluno/del/#{aluno.id}")
+//-            <i class="icon-remove icon-white"></i> Remover
