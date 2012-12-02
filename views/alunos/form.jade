@@ -69,6 +69,17 @@ block content
           option(value='solteiro', selected=aluno.estadoCivil == 'solteiro') Solteiro(a)
           option(value='casado', selected=aluno.estadoCivil == 'casado') Casado(a)
 
+    //- CONJUGE NOME
+    .control-group.conjuge
+      label.control-label(for='conjugeNome') Nome do Conjugue:
+      .controls
+        input#conjugeNome.input-xlarge(type="text", placeholder="nome completo", name="conjugeNome", value="#{aluno.conjugeNome}")
+
+    //- CONJUGE CELULAR
+    .control-group.conjuge
+      label.control-label(for='conjugueCel') Celular do Conjugue:
+      .controls
+        input#conjugueCel.input-medium(type="text", placeholder="", name="conjugueCel", value="#{aluno.conjugueCel}")
 
     //- BOTOES
     .control-group
