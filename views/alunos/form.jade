@@ -6,21 +6,71 @@ block content
   form#alunoForm.form-horizontal
     input(type="hidden", name="id", value="#{aluno.id}")
 
+    //- NOME
     .control-group
       label.control-label(for='nome') Nome:
       .controls
         input#nome.input-xlarge(type="text", placeholder="nome completo", name="nome", value="#{aluno.nome}")
 
+    //- DATA DE NASCIMENTO
     .control-group
       label.control-label(for='nascimento') Data de Nascimento:
       .controls
-        input#nascimento.input-medium(type="text", placeholder="", name="nascimento", value="#{aluno.nascimento}")
+        input#nascimento.input-small(type="text", placeholder="", name="nascimento", value="#{aluno.nascimento}")
 
+    //- ENDERECO
     .control-group
       label.control-label(for='endereco') Endereço:
       .controls
         input#endereco.input-xxlarge(type="text", placeholder="Rua... número...", name="endereco", value="#{aluno.endereco}")
 
+    //- BAIRRO
+    .control-group
+      label.control-label(for='bairro') Bairro:
+      .controls
+        input#bairro.input-large(type="text", placeholder="", name="bairro", value="#{aluno.bairro}")
+
+    //- CEP
+    .control-group
+      label.control-label(for='cep') Cep:
+      .controls
+        input#cep.input-small(type="text", placeholder="", name="cep", value="#{aluno.cep}")
+
+    //- TELEFONE
+    .control-group
+      label.control-label(for='telefone') Telefone:
+      .controls
+        input#telefone.input-medium(type="text", placeholder="", name="telefone", value="#{aluno.telefone}")
+
+    //- CELULAR
+    .control-group
+      label.control-label(for='celular') Celular:
+      .controls
+        input#celular.input-medium(type="text", placeholder="", name="celular", value="#{aluno.celular}")
+
+    //- EMAIL
+    .control-group
+      label.control-label(for='email') Email:
+      .controls
+        input#email.input-large(type="text", placeholder="nome@email.com.br", name="email", value="#{aluno.email}")
+
+    //- PROFISSAO
+    .control-group
+      label.control-label(for='profissao') Profissão:
+      .controls
+        input#profissao.input-large(type="text", placeholder="", name="profissao", value="#{aluno.profissao}")
+
+    //- ESTADO CIVIL
+    .control-group
+      label.control-label(for='estadoCivil') Estado Civil:
+      .controls
+        select#estadoCivil.input-medium(name="estadoCivil", value="#{aluno.estadoCivil}")
+          option(value='')
+          option(value='solteiro', selected=aluno.estadoCivil == 'solteiro') Solteiro(a)
+          option(value='casado', selected=aluno.estadoCivil == 'casado') Casado(a)
+
+
+    //- BOTOES
     .control-group
       .controls
         a.btn.btn-warning(href="/aluno/lista")
