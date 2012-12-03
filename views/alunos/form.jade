@@ -81,6 +81,90 @@ block content
       .controls
         input#conjugueCel.input-medium(type="text", placeholder="", name="conjugueCel", value="#{aluno.conjugueCel}")
 
+    //- PAI NOME
+    .control-group.parents
+      label.control-label(for='paiNome') Nome do Pai:
+      .controls
+        input#paiNome.input-xlarge(type="text", placeholder="nome completo", name="paiNome", value="#{aluno.paiNome}")
+
+    //- PAI CELULAR
+    .control-group.parents
+      label.control-label(for='paiCel') Celular do Pai:
+      .controls
+        input#paiCel.input-medium(type="text", placeholder="", name="paiCel", value="#{aluno.paiCel}")
+
+    //- MAE NOME
+    .control-group.parents
+      label.control-label(for='maeNome') Nome da Mãe:
+      .controls
+        input#maeNome.input-xlarge(type="text", placeholder="nome completo", name="maeNome", value="#{aluno.maeNome}")
+
+    //- MAE CELULAR
+    .control-group.parents
+      label.control-label(for='maeCel') Celular da Mãe:
+      .controls
+        input#maeCel.input-medium(type="text", placeholder="", name="maeCel", value="#{aluno.maeCel}")
+
+    //- PROBLEMAS DE SAUDE
+    .control-group
+      label.control-label(for='problSaude') Problemas de Saúde?
+      .controls
+        input#problSaude.input-xxlarge(type="text", placeholder="Coluna? ", name="problSaude", value="#{aluno.problSaude}")
+
+    //- ALERGIA
+    .control-group
+      label.control-label(for='alergia') Alergias?
+      .controls
+        input#alergia.input-xxlarge(type="text", placeholder="", name="alergia", value="#{aluno.alergia}")
+
+    //- FRATURAS
+    .control-group
+      label.control-label(for='fratura') Fraturas?
+      .controls
+        input#fratura.input-xxlarge(type="text", placeholder="Mão? Ante-braço? Perna?", name="fratura", value="#{aluno.fratura}")
+
+    //- MEDICACAO
+    .control-group
+      label.control-label(for='medicacao') Medicação?
+      .controls
+        input#medicacao.input-xxlarge(type="text", placeholder="", name="medicacao", value="#{aluno.medicacao}")
+
+    //- OUTRA ARTE MARCIAL
+    .control-group
+      label.control-label(for='outraArteMarcial') Praticou outra arte marcial?
+      .controls
+        input#outraArteMarcial.input-large(type="text", placeholder="", name="outraArteMarcial", value="#{aluno.outraArteMarcial}")
+
+    //- GRADUACAO OUTRA ARTE MARCIAL
+    .control-group
+      label.control-label(for='graduacaoOutra') Graduação?
+      .controls
+        input#graduacaoOutra.input-large(type="text", placeholder="", name="graduacaoOutra", value="#{aluno.graduacaoOutra}")
+
+    //- INDICACAO
+    .control-group
+      label.control-label(for='indicacao') Indicação?
+      .controls
+        input#indicacao.input-large(type="text", placeholder="", name="indicacao", value="#{aluno.indicacao}")
+
+    //- DATA DE VENCIMENTO
+    .control-group
+      label.control-label(for='diaVencimento') Data de Vencimento:
+      .controls
+        input#diaVencimento.input-mini(type="text", placeholder="", name="diaVencimento", value="#{aluno.diaVencimento}")
+
+    //- PLANO
+    .control-group
+      label.control-label(for='plano') Plano
+      .controls
+        input#plano.input-large(type="text", placeholder="", name="plano", value="#{aluno.plano}")
+
+    //- MODALIDADE
+    .control-group
+      label.control-label(for='modalidades') Modalidade
+      .controls
+        input#modalidades.input-large(type="text", placeholder="", name="modalidades", value="#{aluno.modalidades}")
+
     //- BOTOES
     .control-group
       .controls
