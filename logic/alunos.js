@@ -78,6 +78,7 @@ exports.del = function(req, res, next){
 
 exports.niver = function(req, res, next){
 	var alunos = nStore.new('data/alunos.db', function () {
+    //TODO descobrir o motivo e ajustar
     //somando 1 ao resultado de getMonth() porque esta trazendo o mes anterior, nao sei porque.
     //estou em dezembro no momento e ele teima em trazer novembro.
     var d = new Date().getMonth()+1;
@@ -90,6 +91,7 @@ exports.niver = function(req, res, next){
 function preencheAluno(data) {
 	if(data.id == '') {
 		var d = new Date();
+    //TODO descobrir o motivo e ajustar
     //somando 1 ao resultado de getMonth() porque esta trazendo o mes anterior, nao sei porque.
     //estou em dezembro no momento e ele teima em trazer novembro.
 		data.id = d.getDate() + '' + d.getMonth()+1 + '' + d.getFullYear() + '' + d.getHours() + '' + d.getMinutes() + '' + d.getSeconds();
