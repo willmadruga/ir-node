@@ -14,12 +14,25 @@ $(function(){
 		$('#maeCel').mask("(999) 9999-9999");
 		
 		// Show/Hide
-		if($('#estadoCivil').val() == '') {
+
+    //para o carregamento inicial
+			if($('#estadoCivil').val() == 'casado') {
+				$('.control-group.conjuge').show('fast');
+				$('.control-group.parents').hide('fast');
+				$('#contato .mensagem').hide('fast');
+			}
+			else if($('#estadoCivil').val() == 'solteiro') {
+				$('.control-group.parents').show('fast');
+				$('.control-group.conjuge').hide('fast');
+				$('#contato .mensagem').hide('fast');
+			}
+			else {
 				$('#contato .mensagem').show('fast');
 				$('.control-group.parents').hide('fast');
 				$('.control-group.conjuge').hide('fast');
-		}
+			}
 
+    //para o change em Estado Civil
 		$('#estadoCivil').on('change', function() {
 			if($('#estadoCivil').val() == 'casado') {
 				$('.control-group.conjuge').show('fast');

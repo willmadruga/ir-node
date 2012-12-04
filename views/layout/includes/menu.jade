@@ -6,6 +6,7 @@
       div.nav-collapse.collapse
         ul.nav
           li: a(href="/") Alunos
+          li: a(href="/aniversariantes") Aniversariantes
           li.dropdown
             a.dropdown-toggle(href='#', data-toggle='dropdown') Financeiro
               &nbsp;
@@ -13,4 +14,10 @@
             ul.dropdown-menu
               li: a(href="/financeiro/mensalidades") Mensalidade
               li: a(href="/financeiro/exames") Exames
-          li: a(href="/aniversariantes") Aniversariantes
+          li.dropdown
+            a.dropdown-toggle(href='#', data-toggle='dropdown') Cadastro Auxiliar
+              &nbsp;
+              b.caret
+            ul.dropdown-menu
+              li: a(href="/apoio/modalidades") Modalidades
+              li: a(href="/apoio/planos") Planos

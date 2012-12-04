@@ -25,13 +25,17 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-// ROUTES FOR ALUNO
+// ROUTES
+
+//ALUNO
 app.get('/', alunos.list);
 app.get('/aluno/lista', alunos.list);
 app.get('/aluno/novo', alunos.form);
 app.post('/aluno/save', alunos.save);
 app.get('/aluno/edit/:id', alunos.edit);
 app.get('/aluno/del/:id', alunos.del);
+app.get('/aniversariantes', alunos.niver);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

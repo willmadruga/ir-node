@@ -1,0 +1,15 @@
+extends ../layout/template
+
+block content
+  
+  br
+  h1= title
+  br
+  table.table.table-striped.table-bordered
+    thead
+      th Nome
+      th Data de Aniversario
+    - each aluno in alunos
+      tr
+        td:= aluno.nome
+        td:= aluno.nascimento

@@ -13,8 +13,15 @@ block content
 
   form#alunoForm.form-horizontal
     input(type="hidden", name="id", value="#{aluno.id}")
+    input(type="hidden", name="matricula", value="#{aluno.matricula}")
     .tab-content
       #pessoal.tab-pane.active
+        //- DATA DE MATRICULA
+        .control-group
+          label.control-label(for='matricula') Data de Matricula:
+          .controls
+            span#matricula.input-small.uneditable-input #{aluno.matricula}
+
         //- NOME
         .control-group
           label.control-label(for='nome') Nome:

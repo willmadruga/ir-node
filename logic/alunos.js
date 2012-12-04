@@ -4,6 +4,7 @@ var model = {
 	'matricula' : '',
 	'nome' : '',
 	'nascimento' : '',
+	'mesNascimento' : '',
 	'endereco' : '',
 	'bairro' : '',
 	'cep' : '',
@@ -75,18 +76,33 @@ exports.del = function(req, res, next){
 	});
 };
 
+exports.niver = function(req, res, next){
+	var alunos = nStore.new('data/alunos.db', function () {
+    //somando 1 ao resultado de getMonth() porque esta trazendo o mes anterior, nao sei porque.
+    //estou em dezembro no momento e ele teima em trazer novembro.
+    var d = new Date().getMonth()+1;
+		alunos.find({mesNascimento: d.toString()}, function (err, results) {
+			res.render('alunos/niver', { title: 'Aniversariantes do Mes', alunos: results });
+		});
+	});
+};
+
 function preencheAluno(data) {
 	if(data.id == '') {
 		var d = new Date();
-		data.id = d.getDate() + '' + d.getMonth() + '' + d.getFullYear() + '' + d.getHours() + '' + d.getMinutes() + '' + d.getSeconds();
+    //somando 1 ao resultado de getMonth() porque esta trazendo o mes anterior, nao sei porque.
+    //estou em dezembro no momento e ele teima em trazer novembro.
+		data.id = d.getDate() + '' + d.getMonth()+1 + '' + d.getFullYear() + '' + d.getHours() + '' + d.getMinutes() + '' + d.getSeconds();
+    data.matricula = d.getDate() + '/' + d.getMonth() + '/' + d.getFullYear();
 		delete d;
 	}
-	
+
 	var Aluno = Object.create(model);
 		Aluno.id = data.id;
 		Aluno.matricula = data.matricula;
 		Aluno.nome = data.nome;
 		Aluno.nascimento = data.nascimento;
+		Aluno.mesNascimento = data.nascimento.split('/')[1];
 		Aluno.endereco = data.endereco;
 		Aluno.bairro = data.bairro;
 		Aluno.cep = data.cep;
