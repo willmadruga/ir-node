@@ -13,174 +13,173 @@ block content
 
   form#alunoForm.form-horizontal
     input(type="hidden", name="id", value="#{aluno.id}")
- 
-   .tab-content
-    #pessoal.tab-pane.active
-      //- NOME
-      .control-group
-        label.control-label(for='nome') Nome:
-        .controls
-          input#nome.input-xlarge(type="text", placeholder="nome completo", name="nome", value="#{aluno.nome}")
+    .tab-content
+      #pessoal.tab-pane.active
+        //- NOME
+        .control-group
+          label.control-label(for='nome') Nome:
+          .controls
+            input#nome.input-xlarge(type="text", placeholder="nome completo", name="nome", value="#{aluno.nome}")
 
-      //- DATA DE NASCIMENTO
-      .control-group
-        label.control-label(for='nascimento') Data de Nascimento:
-        .controls
-          input#nascimento.input-small(type="text", placeholder="", name="nascimento", value="#{aluno.nascimento}")
+        //- DATA DE NASCIMENTO
+        .control-group
+          label.control-label(for='nascimento') Data de Nascimento:
+          .controls
+            input#nascimento.input-small(type="text", placeholder="", name="nascimento", value="#{aluno.nascimento}")
 
-      //- TELEFONE
-      .control-group
-        label.control-label(for='telefone') Telefone:
-        .controls
-          input#telefone.input-medium(type="text", placeholder="", name="telefone", value="#{aluno.telefone}")
+        //- TELEFONE
+        .control-group
+          label.control-label(for='telefone') Telefone:
+          .controls
+            input#telefone.input-medium(type="text", placeholder="", name="telefone", value="#{aluno.telefone}")
 
-      //- CELULAR
-      .control-group
-        label.control-label(for='celular') Celular:
-        .controls
-          input#celular.input-medium(type="text", placeholder="", name="celular", value="#{aluno.celular}")
+        //- CELULAR
+        .control-group
+          label.control-label(for='celular') Celular:
+          .controls
+            input#celular.input-medium(type="text", placeholder="", name="celular", value="#{aluno.celular}")
 
-      //- EMAIL
-      .control-group
-        label.control-label(for='email') Email:
-        .controls
-          input#email.input-large(type="text", placeholder="nome@email.com.br", name="email", value="#{aluno.email}")
+        //- EMAIL
+        .control-group
+          label.control-label(for='email') Email:
+          .controls
+            input#email.input-large(type="text", placeholder="nome@email.com.br", name="email", value="#{aluno.email}")
 
-      //- PROFISSAO
-      .control-group
-        label.control-label(for='profissao') Profissão:
-        .controls
-          input#profissao.input-large(type="text", placeholder="", name="profissao", value="#{aluno.profissao}")
+        //- PROFISSAO
+        .control-group
+          label.control-label(for='profissao') Profissão:
+          .controls
+            input#profissao.input-large(type="text", placeholder="", name="profissao", value="#{aluno.profissao}")
 
-      //- ESTADO CIVIL
-      .control-group
-        label.control-label(for='estadoCivil') Estado Civil:
-        .controls
-          select#estadoCivil.input-medium(name="estadoCivil", value="#{aluno.estadoCivil}")
-            option(value='')
-            option(value='solteiro', selected=aluno.estadoCivil == 'solteiro') Solteiro(a)
-            option(value='casado', selected=aluno.estadoCivil == 'casado') Casado(a)
+        //- ESTADO CIVIL
+        .control-group
+          label.control-label(for='estadoCivil') Estado Civil:
+          .controls
+            select#estadoCivil.input-medium(name="estadoCivil", value="#{aluno.estadoCivil}")
+              option(value='')
+              option(value='solteiro', selected=aluno.estadoCivil == 'solteiro') Solteiro(a)
+              option(value='casado', selected=aluno.estadoCivil == 'casado') Casado(a)
 
-    #endereco.tab-pane
-      //- ENDERECO
-      .control-group
-        label.control-label(for='endereco') Endereço:
-        .controls
-          input#endereco.input-xxlarge(type="text", placeholder="Rua... número...", name="endereco", value="#{aluno.endereco}")
+      #endereco.tab-pane
+        //- ENDERECO
+        .control-group
+          label.control-label(for='endereco') Endereço:
+          .controls
+            input#endereco.input-xxlarge(type="text", placeholder="Rua... número...", name="endereco", value="#{aluno.endereco}")
 
-      //- BAIRRO
-      .control-group
-        label.control-label(for='bairro') Bairro:
-        .controls
-          input#bairro.input-large(type="text", placeholder="", name="bairro", value="#{aluno.bairro}")
+        //- BAIRRO
+        .control-group
+          label.control-label(for='bairro') Bairro:
+          .controls
+            input#bairro.input-large(type="text", placeholder="", name="bairro", value="#{aluno.bairro}")
 
-      //- CEP
-      .control-group
-        label.control-label(for='cep') Cep:
-        .controls
-          input#cep.input-small(type="text", placeholder="", name="cep", value="#{aluno.cep}")
+        //- CEP
+        .control-group
+          label.control-label(for='cep') Cep:
+          .controls
+            input#cep.input-small(type="text", placeholder="", name="cep", value="#{aluno.cep}")
 
-    #contato.tab-pane
-      .mensagem
-        Para habilitar as opcoes, selecione o estado civil na aba Dados Pessoais
+      #contato.tab-pane
+        .mensagem
+          Para habilitar as opcoes, selecione o estado civil na aba Dados Pessoais
 
-      //- CONJUGE NOME
-      .control-group.conjuge
-        label.control-label(for='conjugeNome') Nome do Conjugue:
-        .controls
-          input#conjugeNome.input-xlarge(type="text", placeholder="nome completo", name="conjugeNome", value="#{aluno.conjugeNome}")
+        //- CONJUGE NOME
+        .control-group.conjuge
+          label.control-label(for='conjugeNome') Nome do Conjugue:
+          .controls
+            input#conjugeNome.input-xlarge(type="text", placeholder="nome completo", name="conjugeNome", value="#{aluno.conjugeNome}")
 
-      //- CONJUGE CELULAR
-      .control-group.conjuge
-        label.control-label(for='conjugueCel') Celular do Conjugue:
-        .controls
-          input#conjugueCel.input-medium(type="text", placeholder="", name="conjugueCel", value="#{aluno.conjugueCel}")
+        //- CONJUGE CELULAR
+        .control-group.conjuge
+          label.control-label(for='conjugueCel') Celular do Conjugue:
+          .controls
+            input#conjugueCel.input-medium(type="text", placeholder="", name="conjugueCel", value="#{aluno.conjugueCel}")
 
-      //- PAI NOME
-      .control-group.parents
-        label.control-label(for='paiNome') Nome do Pai:
-        .controls
-          input#paiNome.input-xlarge(type="text", placeholder="nome completo", name="paiNome", value="#{aluno.paiNome}")
+        //- PAI NOME
+        .control-group.parents
+          label.control-label(for='paiNome') Nome do Pai:
+          .controls
+            input#paiNome.input-xlarge(type="text", placeholder="nome completo", name="paiNome", value="#{aluno.paiNome}")
 
-      //- PAI CELULAR
-      .control-group.parents
-        label.control-label(for='paiCel') Celular do Pai:
-        .controls
-          input#paiCel.input-medium(type="text", placeholder="", name="paiCel", value="#{aluno.paiCel}")
+        //- PAI CELULAR
+        .control-group.parents
+          label.control-label(for='paiCel') Celular do Pai:
+          .controls
+            input#paiCel.input-medium(type="text", placeholder="", name="paiCel", value="#{aluno.paiCel}")
 
-      //- MAE NOME
-      .control-group.parents
-        label.control-label(for='maeNome') Nome da Mãe:
-        .controls
-          input#maeNome.input-xlarge(type="text", placeholder="nome completo", name="maeNome", value="#{aluno.maeNome}")
+        //- MAE NOME
+        .control-group.parents
+          label.control-label(for='maeNome') Nome da Mãe:
+          .controls
+            input#maeNome.input-xlarge(type="text", placeholder="nome completo", name="maeNome", value="#{aluno.maeNome}")
 
-      //- MAE CELULAR
-      .control-group.parents
-        label.control-label(for='maeCel') Celular da Mãe:
-        .controls
-          input#maeCel.input-medium(type="text", placeholder="", name="maeCel", value="#{aluno.maeCel}")
+        //- MAE CELULAR
+        .control-group.parents
+          label.control-label(for='maeCel') Celular da Mãe:
+          .controls
+            input#maeCel.input-medium(type="text", placeholder="", name="maeCel", value="#{aluno.maeCel}")
 
-    #historico.tab-pane
-      //- PROBLEMAS DE SAUDE
-      .control-group
-        label.control-label(for='problSaude') Problemas de Saúde?
-        .controls
-          input#problSaude.input-xxlarge(type="text", placeholder="Coluna? ", name="problSaude", value="#{aluno.problSaude}")
+      #historico.tab-pane
+        //- PROBLEMAS DE SAUDE
+        .control-group
+          label.control-label(for='problSaude') Problemas de Saúde?
+          .controls
+            input#problSaude.input-xxlarge(type="text", placeholder="Coluna? ", name="problSaude", value="#{aluno.problSaude}")
 
-      //- ALERGIA
-      .control-group
-        label.control-label(for='alergia') Alergias?
-        .controls
-          input#alergia.input-xxlarge(type="text", placeholder="", name="alergia", value="#{aluno.alergia}")
+        //- ALERGIA
+        .control-group
+          label.control-label(for='alergia') Alergias?
+          .controls
+            input#alergia.input-xxlarge(type="text", placeholder="", name="alergia", value="#{aluno.alergia}")
 
-      //- FRATURAS
-      .control-group
-        label.control-label(for='fratura') Fraturas?
-        .controls
-          input#fratura.input-xxlarge(type="text", placeholder="Mão? Ante-braço? Perna?", name="fratura", value="#{aluno.fratura}")
+        //- FRATURAS
+        .control-group
+          label.control-label(for='fratura') Fraturas?
+          .controls
+            input#fratura.input-xxlarge(type="text", placeholder="Mão? Ante-braço? Perna?", name="fratura", value="#{aluno.fratura}")
 
-      //- MEDICACAO
-      .control-group
-        label.control-label(for='medicacao') Medicação?
-        .controls
-          input#medicacao.input-xxlarge(type="text", placeholder="", name="medicacao", value="#{aluno.medicacao}")
+        //- MEDICACAO
+        .control-group
+          label.control-label(for='medicacao') Medicação?
+          .controls
+            input#medicacao.input-xxlarge(type="text", placeholder="", name="medicacao", value="#{aluno.medicacao}")
 
-      //- OUTRA ARTE MARCIAL
-      .control-group
-        label.control-label(for='outraArteMarcial') Praticou outra arte marcial?
-        .controls
-          input#outraArteMarcial.input-large(type="text", placeholder="", name="outraArteMarcial", value="#{aluno.outraArteMarcial}")
+        //- OUTRA ARTE MARCIAL
+        .control-group
+          label.control-label(for='outraArteMarcial') Praticou outra arte marcial?
+          .controls
+            input#outraArteMarcial.input-large(type="text", placeholder="", name="outraArteMarcial", value="#{aluno.outraArteMarcial}")
 
-      //- GRADUACAO OUTRA ARTE MARCIAL
-      .control-group
-        label.control-label(for='graduacaoOutra') Graduação?
-        .controls
-          input#graduacaoOutra.input-large(type="text", placeholder="", name="graduacaoOutra", value="#{aluno.graduacaoOutra}")
+        //- GRADUACAO OUTRA ARTE MARCIAL
+        .control-group
+          label.control-label(for='graduacaoOutra') Graduação?
+          .controls
+            input#graduacaoOutra.input-large(type="text", placeholder="", name="graduacaoOutra", value="#{aluno.graduacaoOutra}")
 
-      //- INDICACAO
-      .control-group
-        label.control-label(for='indicacao') Indicação?
-        .controls
-          input#indicacao.input-large(type="text", placeholder="", name="indicacao", value="#{aluno.indicacao}")
+        //- INDICACAO
+        .control-group
+          label.control-label(for='indicacao') Indicação?
+          .controls
+            input#indicacao.input-large(type="text", placeholder="", name="indicacao", value="#{aluno.indicacao}")
 
-    #financeiro.tab-pane
-      //- DATA DE VENCIMENTO
-      .control-group
-        label.control-label(for='diaVencimento') Data de Vencimento:
-        .controls
-          input#diaVencimento.input-mini(type="text", placeholder="", name="diaVencimento", value="#{aluno.diaVencimento}")
+      #financeiro.tab-pane
+        //- DATA DE VENCIMENTO
+        .control-group
+          label.control-label(for='diaVencimento') Data de Vencimento:
+          .controls
+            input#diaVencimento.input-mini(type="text", placeholder="", name="diaVencimento", value="#{aluno.diaVencimento}")
 
-      //- PLANO
-      .control-group
-        label.control-label(for='plano') Plano
-        .controls
-          input#plano.input-large(type="text", placeholder="", name="plano", value="#{aluno.plano}")
+        //- PLANO
+        .control-group
+          label.control-label(for='plano') Plano
+          .controls
+            input#plano.input-large(type="text", placeholder="", name="plano", value="#{aluno.plano}")
 
-      //- MODALIDADE
-      .control-group
-        label.control-label(for='modalidades') Modalidade
-        .controls
-          input#modalidades.input-large(type="text", placeholder="", name="modalidades", value="#{aluno.modalidades}")
+        //- MODALIDADE
+        .control-group
+          label.control-label(for='modalidades') Modalidade
+          .controls
+            input#modalidades.input-large(type="text", placeholder="", name="modalidades", value="#{aluno.modalidades}")
 
     br
     br  
