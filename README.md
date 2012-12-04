@@ -5,9 +5,9 @@ Controle básico dos alunos da academia
 
 Dependencias:
 
-  - npm install express
-  
-  - npm install nstore
+  - npm install 
+
+  - mkdir data (para criar o diretorio data dentro do projeto)
   
 Tornou possível:
 
